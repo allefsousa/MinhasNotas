@@ -1,5 +1,7 @@
 package com.developer.allef.mynotes.Model;
 
+import android.content.Context;
+
 import com.orm.SugarRecord;
 import com.orm.dsl.Table;
 import com.orm.dsl.Unique;
@@ -19,6 +21,7 @@ public class Notas extends SugarRecord {
 
     public Notas() {
     }
+
 
     public String getTitulo() {
         return titulo;
