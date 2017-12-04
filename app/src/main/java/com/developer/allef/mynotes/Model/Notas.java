@@ -1,20 +1,20 @@
 package com.developer.allef.mynotes.Model;
 
 import com.orm.SugarRecord;
+import com.orm.dsl.Table;
+import com.orm.dsl.Unique;
 
 /**
  * Created by allef on 04/12/2017.
  */
-
 public class Notas extends SugarRecord {
+    @Unique
     String titulo;
     String conteudo;
-    String data;
 
-    public Notas(String titulo, String conteudo, String data) {
+    public Notas(String titulo, String conteudo) {
         this.titulo = titulo;
         this.conteudo = conteudo;
-        this.data = data;
     }
 
     public Notas() {
@@ -36,11 +36,4 @@ public class Notas extends SugarRecord {
         this.conteudo = conteudo;
     }
 
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
-    }
 }

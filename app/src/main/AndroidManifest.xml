@@ -20,7 +20,7 @@
         </activity>
 
         <meta-data android:name="DATABASE" android:value="mynotes.db" /> <!-- nome Banco de dados-->
-        <meta-data android:name="VERSION" android:value="2" /> <!-- Versão do seu esquema de banco de dados.-->
+        <meta-data android:name="VERSION" android:value="1" /> <!-- Versão do seu esquema de banco de dados.-->
         <meta-data android:name="QUERY_LOG" android:value="true" /> <!-- Registra as consultas selecionadas geradas.-->
         <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.developer.allef.mynotes.Model" /> <!-- local onde ficara as classe de modelo-->
 
