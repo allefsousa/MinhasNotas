@@ -1,6 +1,7 @@
 package com.developer.allef.mynotes;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
@@ -11,6 +12,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.developer.allef.mynotes.Model.Notas;
+
+import java.security.Principal;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -45,9 +48,10 @@ public class principalActivity extends AppCompatActivity {
                 Notas n = new Notas();
 
                 if (titulo.getText().toString().isEmpty()) {
-                    erroTitulo.setError("titulo Não pode ser Vazio.");
+                    erroTitulo.setErrorEnabled(true);
+                    erroTitulo.setError("titulo não pode ser vazio.");
                 } else if (nota.getText().toString().isEmpty()) {
-                    erroConteudo.setError("Conteudo nao pode ser Vazio.");
+                    erroConteudo.setError("Conteudo não pode ser vazio.");
                 } else {
                     n.setTitulo(titulo.getText().toString());
                     n.setConteudo(nota.getText().toString());
@@ -60,6 +64,12 @@ public class principalActivity extends AppCompatActivity {
             }
 
 
+        });
+        visualizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(principalActivity.this,exibirNotasActivity.class));
+            }
         });
 
     }
