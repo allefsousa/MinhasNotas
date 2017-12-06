@@ -19,11 +19,15 @@ public class exibirNotasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exibir_notas);
+        getSupportActionBar().setTitle("Minhas Notas");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
          RecyclerView recyclerView =(RecyclerView) findViewById(R.id.recicler);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         List<Notas> no = Notas.listAll(Notas.class);
         NotaAdapter adapter = new NotaAdapter(no);
+        adapter.notifyDataSetChanged();
         recyclerView.setAdapter(adapter);
 
 

@@ -31,7 +31,12 @@
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="com.developer.allef.mynotes.Model" /> <!-- local onde ficara as classe de modelo -->
 
-        <activity android:name=".exibirNotasActivity"></activity>
+        <activity android:name=".exibirNotasActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".principalActivity" />
+        </activity>
     </application>
 
 </manifest>
